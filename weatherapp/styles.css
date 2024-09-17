@@ -1,6 +1,6 @@
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family:  'Open Sans', sans-serif;
     background-color: #f0f0f0;
     margin: 0;
     padding: 0;
@@ -11,17 +11,17 @@ body {
     margin: 0 auto;
     padding: 20px;
     padding-top: 5px;
-    max-width: 1400px;
+    max-width: 1200px;
 }
 
 .PM{
     display: flex;
     flex-direction: row;
-    
+    white-space: nowrap;
 }
 .PM p {
-    padding-right: 10px;
-    padding-left: 20px;
+  padding-right: 3px;  
+
 }
 
 .warning {
@@ -31,7 +31,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1350px;
+    max-width: 1160px;
     margin: auto;
 }
 
@@ -55,7 +55,7 @@ body {
 .location{
     background-color: #1b4778;
     height: 80px;
-    font-size: 60px;
+    font-size: 55px;
     padding-left: 20px;
     padding-top: 5px;
     margin: 0;
@@ -74,6 +74,7 @@ body {
 
 
 
+
 .weather-details {
     display: flex;
     justify-content: space-between;
@@ -85,10 +86,10 @@ body {
     position: relative;
     display: flex;
     flex-direction: row;
-    height: 220px;
+    height: 160px;
     border: 1px #355e8e solid;
-    margin-left: 20px;
-    min-width: 900px;
+    margin-left: 12px;
+    min-width: 777px;
     
 }
 .time{
@@ -99,45 +100,66 @@ body {
     left: 10px;
     padding: 0 10px;
     background-color: #224f83;;
+    font-size: 8px;
+    
     
 }
 .sun{
     background-image: url(https://pogoda.interia.pl/i/weather/weather-header-sun-ico.png);
     background-repeat: no-repeat;
     padding-left: 19px;
+    background-size: 27%;
+    font-weight: 100;
 }
 .moon{
     background-image: url(https://pogoda.interia.pl/i/weather/weather-header-moon-ico.png);
     background-repeat: no-repeat;
     padding-left: 19px;
     padding-right: 10px;
+    background-size: 21%;
+    font-weight: 100;
 }
+
+
 .wind{
-background-image: url();
+
 background-repeat: no-repeat;
-padding-left: 17px;
+background-image: url(https://pogoda.interia.pl/i/weather/weather-header-pressure-ico-up.png);
+background-position-y: 2px ;
+background-size: 18%;
+    background-repeat: no-repeat;
+padding-left: 20px;
+
 }
 .pressure{
     background-image: url(https://pogoda.interia.pl/i/weather/weather-header-pressure-ico-up.png);
     background-repeat: no-repeat;
-    padding-left: 17px;
+    padding-left: 25px;
+    background-position: left;
+    background-position-y: 2px ;
+    background-size: 15%;
 
 }
 
 
 
-.temp h2{
+.temp .celsius{
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 5rem;
+    line-height: 45px;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: -4.5px;
     font-weight: lighter;
+    
 }
 .weather-data .important-weather{
     display: flex;
-    font-size: 22px;
+    font-size: 16px;
     margin: 10px 0;
     padding-left: 17px;
+    font-weight: 500;
 }
 
 .temp .weather-data{
@@ -156,16 +178,18 @@ padding-left: 17px;
 .weather-data-numbers p{
 margin-left: 20px;
 color:#a9b5c7;
-font-size: 12px;
-font-weight: bold;
+font-weight: bolder;
+font-size: .9em;
 }
 
 
 
 .weather-now .time p {
     margin: 0;
-    font-size: 17px;
+    font-size: 13px;
     padding-right: 10px;
+    font-weight: lighter;
+
     
 
 }
@@ -192,6 +216,9 @@ font-weight: bold;
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
+    clear: both;
+    overflow: hidden;
+    padding: 0 10px
 }
 
 .weather-links a {
@@ -202,12 +229,16 @@ font-weight: bold;
     display: flex;
 justify-content: center;
     align-items: center;
-    padding: 5px 20px;
-    margin-left: 12px;
+    padding-right: 10px;
     margin-bottom: 10px;
-    font-family: OpenSans, Arial, sans-serif;
-    font-size: 1rem;
-    width: 28%;
+    font-family: 'OpenSans', Arial, sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 1.3px;
+    
+    width: 32%;
+    float: left;
+    box-sizing: border-box;
+    margin-left:auto;
 
 }
 
@@ -232,34 +263,36 @@ justify-content: center;
     display: flex;
     flex-direction: row;
     padding: 0;
-    width: 400px;
-    height: 220px;
-    margin-right: 15px;
+    width: 376px;
+    height: 162px;
+    margin-right: 12px;
 }
 .caqi-logo{
     background-color: #a6a40e;
-    width: 30%;
+    width: 34%;
 }
 .circle-logo{
     background-color: #a6a40e;
-    border: 4px white solid;
-    border-radius: 50%;
+    border: 3px white solid;
+    border-radius:50%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    height: 90px;
-    margin: 10px;
-    margin-top: 60px;
-    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-top: 40px;
+    height: 80px;
+    width: 80px;
+    
 }
 .circle-logo p strong{
     padding-left: 3px;
 }
 .caqi-logo p.source{
-    font-size: 13px;
-    padding-left: 15px;
-    padding-top: 20px;
+    font-size: 11px;
+    padding-left:20px;
+    
+
     color: #c9ca8a;
     
 }
@@ -337,11 +370,23 @@ justify-content: center;
 .blue-link:hover {
     text-decoration: underline;
 }
-
+.small{
+    font-size: 9px;
+    
+    
+}
 
 .video-placeholder {
     margin-top: 20px;
     text-align: center;
+}
+.lowerTextCaqi{
+    padding-left: 8px;
+
+}
+.number{
+    font-size: 28px;
+    font-weight: 400;
 }
 
 .video-placeholder img {
@@ -349,8 +394,8 @@ justify-content: center;
     border-radius: 8px;
 }
 p strong{
-    font-size: 25px;
-    color: #ffffff;
+    font-size: 15px;
+    color: #fff;
 }
 .struct{
     display: flex;
@@ -364,7 +409,7 @@ color: #c9ca8a;
 }
 .air-quality-text p {
     padding-left: 20px;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 @media screen and (max-width: 768px) {

@@ -6,6 +6,9 @@
     <title>Pogoda - Twoje Miasto</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <script defer>
         function closeWarning() {
             document.querySelector('.warning').style.display = 'none';
@@ -33,20 +36,20 @@
                     <div class="time">
                         <p>Pogoda teraz - </p>
                         <p>dzisiaj godz. 16:16</p>
-                        <p class="sun"> 6:12      18:48</p>
-                        <p class="moon"> 18:28    03:16</p>
+                        <p class="sun"> 6:12   <p> 18:48</p>  </p>
+                        <p class="moon"> 18:28  <p> 03:16</p> </p>
                     </div>
 
                     <div class="temp">
-                        <img src="https://d.iplsc.com/weather/svg-icons/2.svg" style="height: 145px; padding-top: 30px;"> 
-                        <h2>21°C</h2>
+                        <img src="https://d.iplsc.com/weather/svg-icons/2.svg" style="height: 105px; padding-top: 18px; margin-right: 35px; margin-left: 30px;"> 
+                        <span class="celsius">21°C</span>
 
 <div class="weather-data">
                         <p class="important-weather">Przelotne opady</p>
                         <div class="weather-data-numbers">
                             <p>ODCZUWALNA<br><strong>21°C</strong></p>
-                            <p>CIŚNIENIE<br><strong  class="pressure">1009 hPa</strong></p>
-                            <p >WIATR<br><strong class="wind"><img src="https://pogoda.interia.pl/i/icons-wind-header/13.png" alt="wind.png"> 22 km/h</strong></p>
+                            <p>CIŚNIENIE<br><strong class="pressure">1009 hPa</strong></p>
+                            <p >WIATR<br><strong class="wind">22 km/h</strong></p>
                         </div>
 </div>
 
@@ -58,7 +61,7 @@
                     <div class="air-quality">
                         <div class="caqi-logo"> 
                             <div class="circle-logo">
-                                <p><strong>34</strong><br>CAQI</p>
+                                <p class="small"><strong class="number">34</strong><br><span class="lowerTextCaqi">CAQI</span></p>
                             </div>
                             <p class="source">ŹRÓDŁO: AIRLY</p>
                         </div>
