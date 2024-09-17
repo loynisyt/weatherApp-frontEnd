@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pogoda - Twoje Miasto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script defer>
+        function closeWarning() {
+            document.querySelector('.warning').style.display = 'none';
+        }
+    </script>
+</head>
+<body>
+
+    <section class="warning">
+        <p>Twoja lokalizacja została zablokowana...</p>
+        <button onclick="closeWarning()">X</button>
+    </section>
+
+    <div class="container">
+    
+        <section class="weather-block">
+            <div class="location">
+                <div class="maincity">Warszawa</div>
+            </div>
+            <div class="weather-details">
+
+
+                <div class="weather-now">
+
+                    <div class="time">
+                        <p>Pogoda teraz - </p>
+                        <p>dzisiaj godz. 16:16</p>
+                        <p class="sun"> 6:12      18:48</p>
+                        <p class="moon"> 18:28    03:16</p>
+                    </div>
+
+                    <div class="temp">
+                        <img src="https://d.iplsc.com/weather/svg-icons/2.svg" style="height: 145px; padding-top: 30px;"> 
+                        <h2>21°C</h2>
+
+<div class="weather-data">
+                        <p class="important-weather">Przelotne opady</p>
+                        <div class="weather-data-numbers">
+                            <p>ODCZUWALNA<br><strong>21°C</strong></p>
+                            <p>CIŚNIENIE<br><strong  class="pressure">1009 hPa</strong></p>
+                            <p >WIATR<br><strong class="wind"><img src="https://pogoda.interia.pl/i/icons-wind-header/13.png" alt="wind.png"> 22 km/h</strong></p>
+                        </div>
+</div>
+
+                        </div>
+            
+
+                </div>
+
+                    <div class="air-quality">
+                        <div class="caqi-logo"> 
+                            <div class="circle-logo">
+                                <p><strong>34</strong><br>CAQI</p>
+                            </div>
+                            <p class="source">ŹRÓDŁO: AIRLY</p>
+                        </div>
+
+                        <div class="air-quality-text"> 
+                            <div class="quality">
+                            <p><strong class="shadowText">JAKOŚĆ POWIETRZA</strong><br> Dobra</p>
+                            </div>
+
+                            <div class="PM">
+                            <p> <strong class="shadowText">PM 2.5</strong><br>80% normy</p>
+                            <p><strong class="shadowText">PM 10</strong><br>48% normy</p>
+                            </div>
+
+                        </div>
+                    
+                    </div>
+                </div>
+
+                <div class="weather-links">
+                    <a href="#">POGODA GODZINA PO GODZINIE</a>
+                    <a href="#">POGODA NA 45 DNI DŁUGOTERMINOWA</a>
+                    <a href="#">POGODA NA WEEKEND</a>
+                </div>
+
+            
+            
+
+        </section>
+
+        
+<div class="struct">
+        <section class="cities-weather">
+            <div class="city">
+                <ul class="forecast" id="first">
+                    <h2>Miejsca</h2>
+                    <li class="graycolor">Dzisiaj</li>
+                    <li class="graycolor">Jutro</li>
+                    <li class="graycolor">Poniedziałek</li>
+                    <li class="graycolor">Co godzine</li>
+                </ul>
+            </div>
+            <div class="city">
+                <ul class="forecast">
+                    <h2><a href="#">Sucha Beskidzka, Małopolska</a></h2>
+                    <li class="gray" id="sunsucha">22°C</li>
+                    <li class="gray">24°C</li>
+                    <li class="gray">25°C</li>
+                    <li><a href="#" class="blue-link">Co godzinę</a></li>
+                </ul>
+            </div>
+            <div class="city">
+                <ul class="forecast">
+                    <h2><a href="#">Kraków, Małopolska</a></h2>
+                    <li class="gray">25°C</li>
+                    <li class="gray">26°C</li>
+                    <li class="gray">19°C</li>
+                    <li><a href="#" class="blue-link">Co godzinę</a></li>
+                </ul>
+            </div>
+            <div class="city">
+                <ul class="forecast">
+                    <h2><a href="#">Warszawa, Mazowieckie</a></h2>
+                    <li class="gray">19°C</li>
+                    <li class="gray">25°C</li>
+                    <li class="gray">22°C</li>
+                    <li><a href="#" class="blue-link">Co godzinę</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <aside class="video-placeholder">
+            <img src="https://picsum.photos/400/300" alt="Video placeholder">
+        </aside>
+
+</div>
+
+    </div>
+
+</body>
+</html>
