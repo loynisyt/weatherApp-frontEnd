@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wybierz Miasto - Pogoda</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <style>
+#deletemoreinfo{
+    max-width: 440px;
+}
+    </style>
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+        <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script> <!-- FontAwesome dla ikon -->
+    </head>
+    <body class="has-background-primary-light">
+        <section class="section">
+        <div class="container" style="border: 5px solid #d9b62c; max-width: 1200px;">
+            
+            <div class="box has-background-primary has-text-white">
+            <h1 class="title has-text-centered has-text-warning">Wybierz Miejscowość</h1>
+            <div class="field">
+            <label class="label has-text-warning-light">Nazwa Miasta</label>
+            <div class="control">
+                <div class="select is-fullwidth is-primary">
+                <select id="city-select" class="has-background-primary has-text-white">
+                    <option value="Sucha Beskidzka">Sucha Beskidzka</option>
+                    <option value="Kraków">Kraków</option>
+                    <option value="Warszawa">Warszawa</option>
+                </select>
+                </div>
+            </div>
+
+            </div>
+            <div class="field">
+                <div class="control">
+                <button class="button is-warning is-fullwidth is-medium is-outlined" onclick="redirectToMainPage()">Zobacz pogodę</button>
+                </div>
+            </div>
+            </div>
+
+
+            <div class="columns mx-auto  is-variable is-10"> 
+                <div class="column is-half ml-2 ">
+                <article class="message is-warning">
+                    <div class="message-header">
+                    <p>Uwaga!</p>
+                    <button class="delete"></button>
+                    </div>
+                    <div class="message-body">
+                    Sprawdź pogodę przed planowaniem wyjazdu do wybranego miasta.
+                    Warunki atmosferyczne mogą się zmienić w każdej chwili!
+                    <div id="clock" class="has-text-centered">    00:00        </div>
+                    </div>
+                </article>
+                </div>
+                <div class="column is-half ">
+                    <div class="media-left columns ml-3">
+                        <figure class="image is-48x48">
+                            <img src="https://th.bing.com/th/id/OIP.2yYpcViBLTknwxDCGjLpUwHaHM?rs=1&pid=ImgDetMain" alt="Placeholder image">
+                        </figure>
+                        <div class="media-content ml-4 mt-3">
+                            <p class="title is-4">Pogoda w Polsce</p>
+                            </div>
+                        </div>
+
+                        
+                <div class="card ">
+                    <div class="card-image ml-5">
+                        <div id="ww_3bd926d824efe" v='1.3' loc='id' a='{"t":"horizontal","lang":"pl","sl_lpl":1,"ids":["wl2986"],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"#0097A7","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#FFFFFF","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722"}'>More forecasts: <a href="https://oneweather.org/warsaw/30_days/" id="ww_3bd926d824efe_u" target="_blank">Weather Warsaw 30 days</a></div><script async src="https://app3.weatherwidget.org/js/?id=ww_3bd926d824efe"></script>
+                    </div>
+                    <div class="card-content ml-auto">
+                    <div class="content ">
+                        <div id="deletemoreinfo" class="notification is-primary ">
+                            <button class="delete"></button>
+                            Sprawdź szczegółową prognozę pogody na nadchodzący weekend <br>  
+                            w wybranym mieście.
+                            Zadbaj o komfort podróży i odpowiednie przygotowanie.
+                            <a>Kliknij aby dowiedzieć się więcej</a> 
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+
+            
+    
+        </div>
+        </section>
+    
+        <script>
+        function redirectToMainPage() {
+            const selectedCity = document.getElementById('city-select').value;
+            window.location.href = `http://localhost:8081/mainpage.html?city=${selectedCity}`;
+        }
+
+
+        function showTime() {
+    const now = new Date();
+    const hours = now.getHours().toString().padStart(2, '0');
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    const seconds = now.getSeconds().toString().padStart(2, '0');
+    const timeString = `${hours}:${minutes}:${seconds}`;
+    
+    document.getElementById('clock').textContent = timeString;
+}
+setInterval(showTime, 1000)
+
+
+
+        </script>
+</body>
+</html>
+

@@ -26,7 +26,7 @@
     
         <section class="weather-block">
             <div class="location">
-                <div class="maincity">Warszawa</div>
+                <div id="main_city" class="maincity">Warszawa</div>
             </div>
             <div class="weather-details">
 
@@ -140,6 +140,26 @@
 </div>
 
     </div>
+<script>
 
+
+    function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+    
+        function displayCity() {
+            const city = getQueryParam('city');
+            const cityElement = document.getElementById('main_city');
+
+            cityElement.innerText=city
+
+        }
+
+        window.onload = displayCity;
+
+
+</script>
 </body>
 </html>
