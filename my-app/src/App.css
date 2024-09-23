@@ -1,0 +1,72 @@
+
+.app-container {
+  background-color: #abd5f3; 
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.title {
+  font-size: 3rem;
+  color: #1976d2; 
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.notes {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; 
+}
+
+.box {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin: 10px 0;
+  border-left: 5px solid #1976d2; 
+  transition: box-shadow 0.3s ease; 
+}
+
+.box:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); 
+}
+
+
+.input {
+  font-size: 1.2rem; 
+  font-weight: bold;
+  color: #37474f; 
+}
+
+
+.textarea {
+  font-size: 1rem; 
+  color: #455a64; 
+}
+
+.delete {
+  font-size: 1.5rem; 
+  color: #ff5252; 
+}
+
+.delete:hover {
+  color: #d32f2f; 
+}
+
+
+.button.is-primary {
+  background-color: #1976d2;
+  border: #7eaede 2px solid; 
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  width: 50%;
+  min-width: 420px;
+}
+
+
+.button.is-primary:hover{
+background-color: #7eaede;
+border: #1976d2 2px solid;
+
+}
