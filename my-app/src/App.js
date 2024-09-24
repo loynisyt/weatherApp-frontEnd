@@ -28,8 +28,8 @@ const App = memo(() => {
 
 
   return (
-    <div className="app-container has-background-light p-5">
-      <h1 className="title has-text-centered">Todo App</h1>
+    <div className="app-container p-5">
+      <h1 className="title has-text-centered toDo">Todo App</h1>
 
   
       <div className="has-text-centered">

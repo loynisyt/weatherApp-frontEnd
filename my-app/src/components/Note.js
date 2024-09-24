@@ -1,6 +1,7 @@
 import React, { useState, useCallback, memo } from 'react';
 import SubmitConfirmationModal from './SubmitConfirmationModal';
 import DeleteConfirmationModal from './DeleteConfirmationModal';
+import '../App.css';
 
 const Note = memo(({ note, updateNote, deleteNote,  }) => {
 const [isEditing, setIsEditing] = useState(true);
@@ -37,17 +38,17 @@ const handleEdit = useCallback(() => {
 return (
 <div className="box">
     {!isEditing && (
-    <button className="button is-info is-small mb-2 mr-4" onClick={handleEdit}>
+    <button className="button is-info isSmall mb-2 mr-4 isEdit" onClick={handleEdit}>
         Edit
     </button>
     )}
     {!isEditing && (
-    <button className="button is-danger is-small mb-2 mr-4" onClick={handleCancel}>
+    <button className="button is-danger isSmall mb-2 mr-4" onClick={handleCancel}>
         Delete
     </button>
     )}
     <input
-    className="input mb-2"
+    className="input mb-2 title"
     type="text"
     placeholder="Title"
     value={note.title}
@@ -64,10 +65,10 @@ return (
 
     {isEditing && (
     <div className="buttons mt-3">
-        <button className="button is-primary" onClick={handleSubmit}>
+        <button className="button is-primary " onClick={handleSubmit}>
         Save
         </button>
-        <button className="button is-danger" onClick={handleCancel}>
+        <button className="button is-danger " onClick={handleCancel}>
         Cancel
         </button>
     </div>
