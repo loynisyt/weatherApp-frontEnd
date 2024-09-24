@@ -1,10 +1,10 @@
 import React from 'react';
 
-const DeleteNote = ({ deleteNote, index }) => {
+const DeleteNote = ({ deleteNote, id }) => {
 return (
     <button
     className="delete is-pulled-right"
-    onClick={() => deleteNote(index)}
+    onClick={() => deleteNote(id)}
     ></button>
 );
 };

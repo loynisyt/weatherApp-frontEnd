@@ -1,20 +1,19 @@
-import React from 'react';
+import React, { memo } from 'react';
 import Note from './Note';
 
-const NoteList = ({ notes, updateNote, deleteNote }) => {
+const NoteList = memo(({ notes, updateNote, deleteNote, submitNote }) => {
 return (
     <div className="notes">
-    {notes.map((note, index) => (
+    {notes.map((note) => (
         <Note
-        key={index}
+        key={note.id}
         note={note}
-        index={index}
         updateNote={updateNote}
         deleteNote={deleteNote}
         />
     ))}
     </div>
 );
-};
+});
 
 export default NoteList;
