@@ -2,11 +2,14 @@ import React, { useState, useCallback, memo } from 'react';
 import SubmitConfirmationModal from './SubmitConfirmationModal';
 import DeleteConfirmationModal from './DeleteConfirmationModal';
 import '../App.css';
+import Snackbar from './Snackbar'; 
 
 const Note = memo(({ note, updateNote, deleteNote,  }) => {
 const [isEditing, setIsEditing] = useState(true);
 const [showSubmitModal, setShowSubmitModal] = useState(false);
 const [showDeleteModal, setShowDeleteModal] = useState(false);
+const [showSnackbar, setShowSnackbar] = useState(false); 
+const [snackbarMessage, setSnackbarMessage] = useState('');
 
 const handleSubmit = useCallback(() => {
     setShowSubmitModal(true);
@@ -15,6 +18,8 @@ const handleSubmit = useCallback(() => {
 const confirmSubmit = useCallback(() => {
     setIsEditing(false);
     setShowSubmitModal(false);
+    setSnackbarMessage('Note edited successfully!');
+    setShowSnackbar(true); 
 }, []);
 
 const handleCancel = useCallback(() => {
@@ -24,6 +29,8 @@ const handleCancel = useCallback(() => {
 const confirmDelete = useCallback(() => {
     deleteNote(note.id);
     setShowDeleteModal(false);
+    setSnackbarMessage('Note deleted successfully!'); 
+    setShowSnackbar(true); 
 }, [note.id, deleteNote]);
 
 const cancelAction = useCallback(() => {
@@ -33,6 +40,10 @@ const cancelAction = useCallback(() => {
 
 const handleEdit = useCallback(() => {
     setIsEditing(true);
+}, []);
+
+const closeSnackbar = useCallback(() => {
+    setShowSnackbar(false);
 }, []);
 
 return (
@@ -83,6 +94,10 @@ return (
     onConfirm={confirmDelete}
     onCancel={cancelAction}
     />
+
+
+{showSnackbar && <Snackbar message={snackbarMessage} onClose={closeSnackbar} />}
+
 </div>
 );
 });
